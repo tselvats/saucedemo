@@ -2,8 +2,6 @@ class ProductsPage {
   constructor(page) {
     this.page = page;
     this.productList = '.inventory_item_description';
-    this.productNames = ".inventory_item_name";
-    this.productPrice = '.inventory_item_price';
   }
   async addHighestPriceItemToCart() {
     const products = await this.page.$$eval(this.productList, productElements => {
